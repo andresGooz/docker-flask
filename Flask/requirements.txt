@@ -1,0 +1,4 @@
+flask
+validate_email # fuente: https://github.com/syrusakbary/validate_email/issues agosto 2019
+sqlalchemy
+psycopg2

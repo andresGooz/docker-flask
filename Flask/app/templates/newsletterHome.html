@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+          :root {
+        --cinemaCarteleraColor: #BC986A;
+        --elegant: #FBEEC1;
+        --footerColor: #DAAD86;
+        --red: #b00;
+        --blue: #00b;
+        --fullwidth: 100%;
+      }
+              .body{
+                background: var(--elegant);
+              }
+              /* 1er componente: header con información, fotos, cosas bonitas y el logo */
+              .header {
+                display: grid;
+                background: var(--cinemaCarteleraColor);
+                text-align: left;
+                padding: 14px 16px;
+                bottom: 0;
+              }
+
+              /* 2do componente: contenido y funcionalidad CachiNewsletter */
+              .startMission {
+              display: grid;
+              grid-template-columns: 0.1fr 0.8fr 0.1fr;
+              grid-auto-rows: minmax(100px, auto);
+              background: var(--elegant);
+              text-align: center;
+            }
+                    .leftRail {grid-column: 1;background: var(--elegant);}
+                    .centralRail {grid-column: 2;}
+                    .rightRail {grid-column: 3;background: var(--elegant);}
+                    .stayInTouch {
+                      grid-column: 2 / 3;
+                      var(--elegant);
+                      border-width: 1px;
+                      border-style: solid;
+                      border-color: var(--footerColor);
+                      background: white;
+                    }
+                            .stayInTouchText {
+                              /* text-align: center; */
+                            }
+                            .stayInTouchForm {
+                              /* text-align: center; */
+                            }
+                            .stayInTouchButtom {
+                              padding: 14px 16px;
+                            }
+
+              /* 3er componente: footer */
+              #footer-relative-layer {position:relative;bottom: 0;}
+              #footer-fixed-layer {position: fixed;bottom: 0;
+                background: var(--footerColor);
+                color: white;
+                width: 95%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+              }
+              li {float: center;}
+              li a {
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 14px 8px;
+                text-decoration: none;
+              }
+              li a:hover {
+                background-color: var(--elegant);
+              }
+    </style>
+    <title>CachiNewsletter</title>
+  </head>
+
+  <body class="body">
+    <header class="header">
+      Newsletter Cachi
+    </header>
+
+    <br/>
+
+    <div class="startMission">
+      <div class="leftRail"></div>
+      <div class="centralRail">
+        <div class="amazingText">
+          <h3>¿Qué es Cachi?</h3>
+          Este sitio es la vitrina de las zapatarías nacionales en todas sus gamas. Aquí
+            encontrará zapatos finos, casuales, urbanos, de invierno y verano y si estima conveniente buscamos y le ofrecemos según sus preferencias
+            personalizadas recibirá informaciones y promociones según le guste.
+        </div>
+        <br/>
+
+        <div class="stayInTouch">
+          <div class="stayInTouchText">
+            <h3>Mantengamos Contacto</h3>
+            suscríbete al newsletter así podremos enviarte ofertas y descuentos.
+          </div>
+          <br/>
+          <form action="/" method="post">
+            <div class="stayInTouchForm">
+              <input name="email" type="text" placeholder="Coloca tu e-mail aquí"></input>
+            </div>
+            <div class="stayInTouchButtom">
+              <input type="submit" value="Suscribir"/>
+            </div>
+          </form>
+        </div>
+
+
+      </div>
+      <div class="rightRail"></div>
+
+      <div id="footer-relative-layer">
+          <footer id="footer-fixed-layer">
+            <div>
+              <li><a href="{{ url_for('home') }}"><img src="https://img.icons8.com/ios/50/000000/google-plus-circled.png"/> </a></li>
+            </div>
+            <div>
+              <li><a href="{{ url_for('home') }}"><img src="https://img.icons8.com/ios/50/000000/instagram-new.png"></a></li>
+            </div>
+            <div>
+                <li><a href="{{ url_for('home') }}"><img src="https://img.icons8.com/ios/50/000000/facebook-new.png"></a></li>
+            </div>
+            <div>
+              <li><a href="{{ url_for('home') }}"><img src="https://img.icons8.com/ios/50/000000/pinterest.png"></a></li>
+            </div>
+          </footer>
+      </div>
+
+    </div>
+
+
+
+
+  </body>
+  <footer></footer>
+</html>

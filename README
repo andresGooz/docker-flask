@@ -1,0 +1,42 @@
+____________________________________________________________________________
+Introducción:###############################################################
+El proyecto flaskPostgres consiste en la unión de los siguientes servicios:
+
+- Posgres 9.5
+- Flask con python 3.5
+
+El proyecto consiste en una página de suscripción para un newletter.
+Los emails ingresados son guardados en la base de datos.
+____________________________________________________________________________
+Requisitos:#################################################################
+Para desplegar el proyecto es necesario tener instaladas las siguientes herramientas:
+
+- Docker
+- Docker-compose
+
+____________________________________________________________________________
+Despliegue:#################################################################
+
+paso 1) crear la red flaskPostgres
+  $ docker network create flaskPostgres
+
+paso 2) desplegar el contenedor de base de datos
+  $ cd Postgres
+  $ docker-compose up -d
+
+paso 3) desplegar el contenedor de la aplicación flask
+  $ cd Flask
+  $ docker build -t flask .
+  $ docker-compose up -d
+
+  ____________________________________________________________________________
+Resumen:#################################################################
+
+docker system prune -a -f &&
+docker network create flaskPostgres &&
+cd Postgres &&
+docker-compose up -d &&
+cd ../Flask &&
+docker build -t flask . &&
+docker-compose up -d &&
+docker ps
