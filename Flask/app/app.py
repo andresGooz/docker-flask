@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request
 from validate_email import validate_email
 from sqlalchemy.orm import sessionmaker
-from models import *
+from .models import *
+from .views import *
 from sqlalchemy import create_engine
 
 app = Flask(__name__)
