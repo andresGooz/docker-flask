@@ -1,4 +1,29 @@
 flask
-validate_email # fuente: https://github.com/syrusakbary/validate_email/issues agosto 2019
+validate_email
 sqlalchemy
 psycopg2
+gunicorn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# b i b l i o g r a f í a:
+
+#validate_email: https://github.com/syrusakbary/validate_email/issues agosto 2019
