@@ -4,10 +4,11 @@ services:
     image: flask
     restart: always
     container_name: flask
-    ports:
-      - 5000:5000
+    expose:
+      - 5000
     networks:
       - outside
+
 networks:
   outside:
     external:
